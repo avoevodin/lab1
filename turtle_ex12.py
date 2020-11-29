@@ -18,8 +18,6 @@ def arc(r, arc_direction, first_move = 0):
 			rotate_turtle(angle, arc_direction)
 		turtle.forward(edge)
 		
-	turtle.title(turtle.pos())
-
 def	rotate_turtle(angle, arc_direction):
 	if arc_direction:
 		turtle.right(angle)
