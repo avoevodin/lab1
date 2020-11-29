@@ -1,3 +1,9 @@
+# Drawing of circle
+#
+# vert_amount - amount of polygon's vertixes
+# angle - polygon's angle
+# edge_width - polygon's edge width
+
 import turtle
 
 turtle.shape('turtle')

@@ -1,3 +1,9 @@
+# Drawing square spiral approximately
+#
+# This program code is like the same code of drawing Archimedean spiral, but with the 
+# parametres of key values, which make the spiral approximately looks like a square
+# spiral.
+
 import turtle
 import math
 

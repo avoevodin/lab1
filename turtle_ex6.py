@@ -1,3 +1,11 @@
+# Drawing a spider consisted of turtles
+#
+# paw_amount - amount of spider's paws
+#
+# paw_length - length of spider's paws
+#
+# angle - angle between the paws
+
 import turtle
 
 turtle.shape('turtle')

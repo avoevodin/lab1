@@ -1,3 +1,7 @@
+# Drawing of square spiral
+#
+# Just drawing a square spiral. 
+
 import turtle
 
 turtle.shape('turtle')
