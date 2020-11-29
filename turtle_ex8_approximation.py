@@ -3,8 +3,8 @@ import math
 
 turtle.shape('turtle')
 
-angle_step = math.pi / 180 * 45
-shift = 8
+angle_step = math.radians(45)
+shift = 4
 angle = 0
 rad = 0
 pi = math.pi
