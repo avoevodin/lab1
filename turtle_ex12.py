@@ -3,14 +3,19 @@ import turtle
 
 turtle.shape('turtle')
 
-def arc(r, arc_direction):
+def arc(r, arc_direction, first_move = 0):
 	vert_amount = 80
 	arc_vert_amount = int(vert_amount / 2);
-	edge = 2 * r * math.sin(math.radians(360 / (2 * vert_amount))) 
-	angle = 180 - (vert_amount - 2) / vert_amount * 180
+	edge = 2 * r * math.sin(math.radians(360 / (2 * vert_amount)))
+	polygon_angle = (vert_amount - 2) / vert_amount * 180
+	angle = 180 - polygon_angle
 	
 	for i in range(arc_vert_amount):
-		rotate_turtle(angle, arc_direction)
+		if first_move and i == 0: 
+			turtle.title(angle)
+			rotate_turtle(polygon_angle / 2, not arc_direction)
+		else:
+			rotate_turtle(angle, arc_direction)
 		turtle.forward(edge)
 		
 	turtle.title(turtle.pos())
@@ -21,27 +26,11 @@ def	rotate_turtle(angle, arc_direction):
 	else:
 		turtle.left(angle)
 	
-def circle(edge):
-	vert_amount = 80
-	edge = 2 * r * math.sin(math.radians(360 / (2 * vert_amount))) 
-	angle = 180 - (vert_amount - 2) / vert_amount * 180
-	
-	for i in range(2):
-		for j in range(vert_amount):
-			if i:
-				turtle.right(angle)
-			else:
-				turtle.left(angle)
-			turtle.forward(edge)
-		turtle.title(turtle.pos())
-	
-turtle.left(90)
-
 r1 = 24
 r2 = r1/4
 edge1 = 4
 edge2 = 1
 for i in range(6):
-	arc(r1, 1)
+	arc(r1, 1, i == 0)
 	arc(r2, 1)
 	
