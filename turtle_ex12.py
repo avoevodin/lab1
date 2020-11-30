@@ -4,7 +4,7 @@ import turtle
 turtle.shape('turtle')
 
 def arc(r, arc_direction, first_move = 0):
-	vert_amount = 80
+	vert_amount = 8
 	arc_vert_amount = int(vert_amount / 2);
 	edge = 2 * r * math.sin(math.radians(360 / (2 * vert_amount)))
 	polygon_angle = (vert_amount - 2) / vert_amount * 180
