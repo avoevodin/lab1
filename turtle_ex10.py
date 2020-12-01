@@ -1,9 +1,19 @@
+# Drawing a flower
+#
+# step_count - count of step of rotation. Each rotation draws two centrally symmetric 
+# circles.
+#
+# angle_step - angle of one-step axis rotation.
+#
+# base_angle - current angle of rotating axis
+
 import math
 import turtle
 
 turtle.shape('turtle')
 
-def circle(base_angle):
+def circles(base_angle):
+	"""Drawing two circles in eight-form around curent axis with curent base angle"""
     vert_amount = 80
     angle = 180 - (vert_amount - 2) / vert_amount * 180
     edge_width = 4
@@ -18,10 +28,10 @@ def circle(base_angle):
                 turtle.left(angle)
             turtle.forward(edge_width)
 
-axes_count = 4
-angle_step = 180 / axes_count
+step_count = 4
+angle_step = 180 / step_count
 base_angle = 0
 
-for i in range(axes_count):
-    circle(base_angle)
+for i in range(step_count):
+    circles(base_angle)
     base_angle += angle_step
