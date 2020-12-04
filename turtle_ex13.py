@@ -1,9 +1,22 @@
+# Drawing a smile
+#
+# Drawing a smile with functions, that drawing circles and arcs
+
 import math
 import turtle
 
 turtle.shape('turtle')
 
 def arc(r, mv_direction):
+    """Draw arc with a selected radius and direction of drawing
+    
+    Keyword arguments:
+    r -- the radius of arc-circle (float)
+    mv_direction -- the direction of turtle moving. 1 - right
+         direction, left direction (int)
+    
+    """
+    
     vert_amount = 80
     arc_vert_amount = int(vert_amount / 2);
     edge = 2 * r * math.sin(math.radians(360 / (2 * vert_amount)))
@@ -18,6 +31,14 @@ def arc(r, mv_direction):
         turtle.forward(edge)
         
 def circle(r, mv_direction):
+    """Draw circle with a selected radius and direction of drawing
+    
+    Keyword arguments:
+    r -- the radius of circle (float)
+    mv_direction -- the direction of turtle moving. 1 - right
+         direction, left direction (int)
+    
+    """
     vert_amount = 80
     edge = 2 * r * math.sin(math.radians(360 / (2 * vert_amount))) 
     polygon_angle = (vert_amount - 2) / vert_amount * 180
@@ -31,12 +52,21 @@ def circle(r, mv_direction):
         turtle.forward(edge)
 
 def rotate_turtle(angle, mv_direction):
+    """Rotate turtle with selected angle and direction of drawing
+    
+    Keyword arguments:
+    angle -- angle of turtle rotation (float)
+    mv_direction -- the direction of turtle moving. 1 - right
+         direction, left direction (int)
+         
+    """
+    
     if mv_direction == 1:
         turtle.right(angle)
     else:
         turtle.left(angle)
         
-face_r = 120
+face_r = 120    # init parameters
 face_r_half = face_r / 2
 eye_r = 20
 eye_r_shift = eye_r * 1.2
